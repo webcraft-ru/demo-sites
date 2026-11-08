@@ -1,27 +1,130 @@
 <!doctype html>
 <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow, noarchive">
-<title>Демо-сайты</title><link rel="stylesheet" href="assets/style.css"></head>
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="yandex" content="noindex, nofollow">
+<meta name="theme-color" content="#14110f">
+<title>Демо-сайты · портфолио</title>
+<style>
+:root{--bg:#14110f;--card:#211c18;--ink:#f6efe6;--muted:#b4a899;--line:rgba(255,255,255,.08);--accent:#e8b46a}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(1200px 600px at 20% -10%,#2a211b 0,transparent 60%),var(--bg);color:var(--ink);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.demo-bar{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:center;text-align:center;padding:6px 16px;min-height:34px;background:#ffd84d;color:#1d1d1d;font-size:.8rem;font-weight:700;line-height:1.25}
+.top{max-width:1280px;margin:0 auto;padding:40px 16px 8px}
+.top h1{margin:0 0 8px;font-size:clamp(1.8rem,6vw,3rem);line-height:1.1;letter-spacing:-.01em}
+.top p{margin:0;color:var(--muted);max-width:60ch}
+.filters{max-width:1280px;margin:20px auto 0;padding:0 16px;display:flex;gap:8px;flex-wrap:wrap}
+.filters button{font:inherit;font-size:.9rem;cursor:pointer;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:999px;padding:7px 14px}
+.filters button[aria-pressed=true]{background:var(--accent);color:#2a1d0f;border-color:var(--accent);font-weight:600}
+.grid{max-width:1280px;margin:0 auto;padding:20px 16px 56px;display:grid;gap:14px;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(min-width:700px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}}
+@media(min-width:1100px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.card{display:flex;flex-direction:column;color:inherit;text-decoration:none;background:linear-gradient(180deg,var(--card),#1a1613);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:transform .2s,box-shadow .2s,border-color .2s}
+.card:hover,.card:focus-visible{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.45);border-color:rgba(232,180,106,.5);outline:none}
+.card__img{position:relative;aspect-ratio:4/3;background:linear-gradient(135deg,#3a2d24,#1c1612);overflow:hidden}
+.card__img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.card:hover .card__img img{transform:scale(1.05)}
+.card__tag{position:absolute;left:8px;top:8px;background:rgba(0,0,0,.6);color:#fff;font-size:.72rem;padding:3px 9px;border-radius:999px;backdrop-filter:blur(4px)}
+.card__body{padding:12px 14px 15px}
+.card__name{margin:0;font-size:1.05rem;font-weight:700;line-height:1.2}
+.card__desc{margin:4px 0 0;color:var(--muted);font-size:.88rem}
+.card[hidden]{display:none}
+.foot{max-width:1280px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font-size:.85rem}
+</style></head>
 <body><div class="demo-bar" role="note">Демо-концепт, не официальный сайт, удалим по первой просьбе</div>
-<main class="section"><div class="wrap"><h1>Демо-сайты</h1><ul class="index">
-<li><a href="brioshh/">Бриошь</a> <span class="muted">— Кофейня, Воронеж</span></li>
-<li><a href="emilio/">Emilio</a> <span class="muted">— Кофейня, Воронеж</span></li>
-<li><a href="evo/">Evo</a> <span class="muted">— Автосервис и шиномонтаж, Тамбов</span></li>
-<li><a href="hogsmeade/">Hogsmeade</a> <span class="muted">— Кофейня, Тамбов</span></li>
-<li><a href="kofe-royal/">Кофе рояль</a> <span class="muted">— Кофейня, Воронеж</span></li>
-<li><a href="kruzhok/">Кружок</a> <span class="muted">— Кафе, Воронеж</span></li>
-<li><a href="la-blu-bla/">Ла блу бла</a> <span class="muted">— Кофейня, Липецк</span></li>
-<li><a href="la-fee/">La fee</a> <span class="muted">— Кофейня-кондитерская, Воронеж</span></li>
-<li><a href="luna/">Луна</a> <span class="muted">— Кофейня, Воронеж</span></li>
-<li><a href="madz/">Мадз</a> <span class="muted">— Кофейня, Тамбов</span></li>
-<li><a href="mayak/">Маяк</a> <span class="muted">— Кафе-кондитерская, Воронеж</span></li>
-<li><a href="medauto/">Medauto</a> <span class="muted">— Автосервис, Тюмень</span></li>
-<li><a href="osnova/">Основа</a> <span class="muted">— Кофейня, Воронеж</span></li>
-<li><a href="ptashka-kofe/">Пташка кофе</a> <span class="muted">— Кофейня, Воронеж</span></li>
-<li><a href="ptichka-coffee/">Ptichka coffee</a> <span class="muted">— Кофейня, Воронеж</span></li>
-<li><a href="remy-coffee/">Remy coffee</a> <span class="muted">— Кофейня, Воронеж</span></li>
-<li><a href="seven/">Seven</a> <span class="muted">— Кафе, Воронеж</span></li>
-<li><a href="shestoe-chuvstvo/">Шестое Чувство</a> <span class="muted">— Арт-кофейня, Воронеж</span></li>
-<li><a href="smartauto/">СмартАвто</a> <span class="muted">— Автосервис, Тамбов</span></li>
-<li><a href="volya-avto/">Воля Авто</a> <span class="muted">— Автоцентр, Тамбов</span></li>
-</ul></div></main></body></html>
+<header class="top"><h1>Демо-сайты</h1><p>Концепты сайтов для кофеен, кафе и автосервисов. Выберите карточку, чтобы открыть сайт.</p></header>
+<div class="filters" role="group" aria-label="Фильтр">
+<button type="button" data-f="all" aria-pressed="true">Все (20)</button>
+<button type="button" data-f="cafe" aria-pressed="false">Кофейни и кафе</button>
+<button type="button" data-f="auto" aria-pressed="false">Автосервисы</button>
+</div>
+<main class="grid">
+<a class="card" href="brioshh/" data-kind="cafe">
+  <div class="card__img"><img src="images/brioshh/hero-small.webp" alt="Бриошь" loading="lazy" decoding="async"><span class="card__tag">Воронеж</span></div>
+  <div class="card__body"><h2 class="card__name">Бриошь</h2><p class="card__desc">Кофейня, Воронеж</p></div>
+</a>
+<a class="card" href="emilio/" data-kind="cafe">
+  <div class="card__img"><img src="images/emilio/hero-new-small.jpg" alt="Emilio" loading="lazy" decoding="async"><span class="card__tag">Воронеж</span></div>
+  <div class="card__body"><h2 class="card__name">Emilio</h2><p class="card__desc">Кофейня, Воронеж</p></div>
+</a>
+<a class="card" href="evo/" data-kind="auto">
+  <div class="card__img"><img src="images/evo/hero-small.webp" alt="Evo" loading="lazy" decoding="async"><span class="card__tag">Тамбов</span></div>
+  <div class="card__body"><h2 class="card__name">Evo</h2><p class="card__desc">Автосервис и шиномонтаж, Тамбов</p></div>
+</a>
+<a class="card" href="hogsmeade/" data-kind="cafe">
+  <div class="card__img"><img src="images/hogsmeade/hero-small.jpg" alt="Hogsmeade" loading="lazy" decoding="async"><span class="card__tag">Тамбов</span></div>
+  <div class="card__body"><h2 class="card__name">Hogsmeade</h2><p class="card__desc">Кофейня, Тамбов</p></div>
+</a>
+<a class="card" href="kofe-royal/" data-kind="cafe">
+  <div class="card__img"><img src="images/kofe-royal/hero-small.jpg" alt="Кофе рояль" loading="lazy" decoding="async"><span class="card__tag">Воронеж</span></div>
+  <div class="card__body"><h2 class="card__name">Кофе рояль</h2><p class="card__desc">Кофейня, Воронеж</p></div>
+</a>
+<a class="card" href="kruzhok/" data-kind="cafe">
+  <div class="card__img"><img src="images/kruzhok/hero-small.jpg" alt="Кружок" loading="lazy" decoding="async"><span class="card__tag">Воронеж</span></div>
+  <div class="card__body"><h2 class="card__name">Кружок</h2><p class="card__desc">Кафе, Воронеж</p></div>
+</a>
+<a class="card" href="la-blu-bla/" data-kind="cafe">
+  <div class="card__img"><img src="images/la-blu-bla/hero-small.jpg" alt="Ла блу бла" loading="lazy" decoding="async"><span class="card__tag">Липецк</span></div>
+  <div class="card__body"><h2 class="card__name">Ла блу бла</h2><p class="card__desc">Кофейня, Липецк</p></div>
+</a>
+<a class="card" href="la-fee/" data-kind="cafe">
+  <div class="card__img"><img src="images/la-fee/hero-small.jpg" alt="La fee" loading="lazy" decoding="async"><span class="card__tag">Воронеж</span></div>
+  <div class="card__body"><h2 class="card__name">La fee</h2><p class="card__desc">Кофейня-кондитерская, Воронеж</p></div>
+</a>
+<a class="card" href="luna/" data-kind="cafe">
+  <div class="card__img"><img src="images/luna/hero-small.jpg" alt="Луна" loading="lazy" decoding="async"><span class="card__tag">Воронеж</span></div>
+  <div class="card__body"><h2 class="card__name">Луна</h2><p class="card__desc">Кофейня, Воронеж</p></div>
+</a>
+<a class="card" href="madz/" data-kind="cafe">
+  <div class="card__img"><img src="images/madz/hero-small.jpg" alt="Мадз" loading="lazy" decoding="async"><span class="card__tag">Тамбов</span></div>
+  <div class="card__body"><h2 class="card__name">Мадз</h2><p class="card__desc">Кофейня, Тамбов</p></div>
+</a>
+<a class="card" href="mayak/" data-kind="cafe">
+  <div class="card__img"><img src="images/mayak/hero-small.jpg" alt="Маяк" loading="lazy" decoding="async"><span class="card__tag">Воронеж</span></div>
+  <div class="card__body"><h2 class="card__name">Маяк</h2><p class="card__desc">Кафе-кондитерская, Воронеж</p></div>
+</a>
+<a class="card" href="medauto/" data-kind="auto">
+  <div class="card__img"><img src="images/medauto/hero-small.jpg" alt="Medauto" loading="lazy" decoding="async"><span class="card__tag">Тюмень</span></div>
+  <div class="card__body"><h2 class="card__name">Medauto</h2><p class="card__desc">Автосервис, Тюмень</p></div>
+</a>
+<a class="card" href="osnova/" data-kind="cafe">
+  <div class="card__img"><img src="images/osnova/hero-small.jpg" alt="Основа" loading="lazy" decoding="async"><span class="card__tag">Воронеж</span></div>
+  <div class="card__body"><h2 class="card__name">Основа</h2><p class="card__desc">Кофейня, Воронеж</p></div>
+</a>
+<a class="card" href="ptashka-kofe/" data-kind="cafe">
+  <div class="card__img"><img src="images/ptashka-kofe/hero-small.jpg" alt="Пташка кофе" loading="lazy" decoding="async"><span class="card__tag">Воронеж</span></div>
+  <div class="card__body"><h2 class="card__name">Пташка кофе</h2><p class="card__desc">Кофейня, Воронеж</p></div>
+</a>
+<a class="card" href="ptichka-coffee/" data-kind="cafe">
+  <div class="card__img"><img src="images/ptichka-coffee/hero-small.jpg" alt="Ptichka coffee" loading="lazy" decoding="async"><span class="card__tag">Воронеж</span></div>
+  <div class="card__body"><h2 class="card__name">Ptichka coffee</h2><p class="card__desc">Кофейня, Воронеж</p></div>
+</a>
+<a class="card" href="remy-coffee/" data-kind="cafe">
+  <div class="card__img"><img src="images/remy-coffee/hero-small.jpg" alt="Remy coffee" loading="lazy" decoding="async"><span class="card__tag">Воронеж</span></div>
+  <div class="card__body"><h2 class="card__name">Remy coffee</h2><p class="card__desc">Кофейня, Воронеж</p></div>
+</a>
+<a class="card" href="seven/" data-kind="cafe">
+  <div class="card__img"><img src="images/seven/hero-small.jpg" alt="Seven" loading="lazy" decoding="async"><span class="card__tag">Воронеж</span></div>
+  <div class="card__body"><h2 class="card__name">Seven</h2><p class="card__desc">Кафе, Воронеж</p></div>
+</a>
+<a class="card" href="shestoe-chuvstvo/" data-kind="cafe">
+  <div class="card__img"><img src="images/shestoe-chuvstvo/hero-small.jpg" alt="Шестое Чувство" loading="lazy" decoding="async"><span class="card__tag">Воронеж</span></div>
+  <div class="card__body"><h2 class="card__name">Шестое Чувство</h2><p class="card__desc">Арт-кофейня, Воронеж</p></div>
+</a>
+<a class="card" href="smartauto/" data-kind="auto">
+  <div class="card__img"><img src="images/smartauto/hero-small.jpg" alt="СмартАвто" loading="lazy" decoding="async"><span class="card__tag">Тамбов</span></div>
+  <div class="card__body"><h2 class="card__name">СмартАвто</h2><p class="card__desc">Автосервис, Тамбов</p></div>
+</a>
+<a class="card" href="volya-avto/" data-kind="auto">
+  <div class="card__img"><img src="images/volya-avto/hero-small.jpg" alt="Воля Авто" loading="lazy" decoding="async"><span class="card__tag">Тамбов</span></div>
+  <div class="card__body"><h2 class="card__name">Воля Авто</h2><p class="card__desc">Автоцентр, Тамбов</p></div>
+</a>
+</main>
+<p class="foot">Демо-концепт, не официальный сайт, удалим по первой просьбе. Данные взяты из открытых источников.</p>
+<script>
+document.querySelectorAll('.filters button').forEach(function(btn){btn.addEventListener('click',function(){
+var f=btn.dataset.f;document.querySelectorAll('.filters button').forEach(function(x){x.setAttribute('aria-pressed',x===btn)});
+document.querySelectorAll('.card').forEach(function(c){c.hidden=f!=='all'&&c.dataset.kind!==f})})});
+</script>
+</body></html>
