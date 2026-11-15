@@ -279,10 +279,31 @@ p { margin: 0 0 .75em; }
   background: var(--accent); color: var(--accent-ink); font-weight: 800; font-size: .92rem; overflow-wrap: anywhere;
 }
 /* без фото: строгая текстовая карточка — название и цена, без иконок и градиентов */
-.svc-item--text, .rail__card--text { background: var(--surface); }
-.svc-item--text .svc-item__body { padding: 14px 14px 14px; gap: 10px; }
-.svc-item--text .svc-item__price { padding: 0; background: none; color: var(--accent); border-radius: 0; }
-.rail__card--text .rail__text { padding: 16px 14px; justify-content: center; min-height: 84px; }
+.svc-item--text, .rail__card--text {
+  position: relative;
+  background: linear-gradient(155deg, #21365a 0%, #141c2b 55%, #0a0d13 100%);
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  box-shadow: 0 2px 4px rgba(0,0,0,.4), 0 12px 28px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.03) inset, 0 6px 22px color-mix(in srgb, var(--accent) 12%, transparent);
+}
+.svc-item--text::before, .rail__card--text::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px;
+  background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent) 20%, transparent));
+}
+.svc-item--text:hover, .rail__card--text:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 8px rgba(0,0,0,.45), 0 18px 38px rgba(0,0,0,.55), 0 8px 28px color-mix(in srgb, var(--accent) 28%, transparent);
+}
+.svc-item--text .svc-item__body { padding: 18px 15px 15px; gap: 12px; }
+.svc-item--text .svc-item__name { color: #fff; }
+.svc-item--text .svc-item__desc { color: #b7c3d6; }
+.svc-item--text .svc-item__price {
+  padding: 0; background: none; border-radius: 0; color: #ff9d4d; font-size: 1.15rem; font-weight: 850; letter-spacing: .01em;
+  text-shadow: 0 0 18px color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.rail__card--text .rail__text { padding: 20px 15px 16px; justify-content: center; min-height: 96px; gap: 6px; }
+.rail__card--text .rail__title { color: #ff9d4d; font-size: 1.08rem; }
+.rail__card--text .rail__meta { color: #c3cee0; }
+.rail__card--text[aria-pressed="true"] .rail__meta { color: #ffb677; }
 .svc-more { margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--line); }
 .svc-more[hidden] { display: none; }
 .svc-more__title { margin: 0 0 6px; font-weight: 800; font-size: 1.1rem; }
