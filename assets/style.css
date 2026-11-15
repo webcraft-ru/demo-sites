@@ -181,6 +181,19 @@ p { margin: 0 0 .75em; }
   padding: 6px var(--gutter) 16px; scroll-padding: 0 var(--gutter);
 }
 .rail__track::-webkit-scrollbar { display: none; }
+/* плавное затухание по краям ленты (верхней и нижней): маска растворяет карточки, уходящие за край.
+   Край затухает, только если в ту сторону есть что листать (классы hs-start / hs-end / hs-none ставит main.js). */
+@property --rail-fl { syntax: "<length>"; inherits: false; initial-value: 0px; }
+@property --rail-fr { syntax: "<length>"; inherits: false; initial-value: 0px; }
+.rail__track {
+  --rail-fade: 56px; --rail-fl: var(--rail-fade); --rail-fr: var(--rail-fade);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 var(--rail-fl), #000 calc(100% - var(--rail-fr)), transparent 100%);
+          mask-image: linear-gradient(90deg, transparent 0, #000 var(--rail-fl), #000 calc(100% - var(--rail-fr)), transparent 100%);
+  transition: --rail-fl .3s ease, --rail-fr .3s ease;
+}
+.rail.hs-start .rail__track, .rail.hs-none .rail__track { --rail-fl: 0px; }
+.rail.hs-end .rail__track, .rail.hs-none .rail__track { --rail-fr: 0px; }
+@media (min-width: 768px) { .rail__track { --rail-fade: 96px; } }
 .rail__card {
   flex: 0 0 clamp(148px, 41vw, 220px); scroll-snap-align: start;
   display: flex; flex-direction: column; padding: 0; text-align: left; cursor: pointer; overflow: hidden;
