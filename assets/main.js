@@ -94,57 +94,65 @@
   });
 
   // ---------- 1в. Автосервисы: лента категорий → сетка услуг ----------
-  // Нажатие на категорию открывает под лентой её сетку; «Назад» — снова только лента.
-  // Под сеткой — та же лента без открытой категории (прошлая открытая возвращается в неё).
+  // Экран выбора: видна только верхняя лента. Нажатие на категорию — лента плавно схлопывается и уходит вверх,
+  // на её месте «← Назад к категориям», заголовок категории и сетка. «Назад» — лента возвращается, сетка скрывается.
+  // Под сеткой — лента остальных категорий (прошлая открытая возвращается в неё).
   document.querySelectorAll('[data-svc]').forEach(function (sec) {
     sec.classList.add('is-ready');
+    var heading = sec.querySelector('h2');
+    var topBox = sec.querySelector('[data-top]');
     var top = sec.querySelector('[data-rail="top"]');
     var bottom = sec.querySelector('[data-rail="bottom"]');
     var hsTop = hscroll(top), hsBottom = hscroll(bottom);
     var topCards = top.querySelectorAll('[data-open]');
     var bottomCards = bottom.querySelectorAll('[data-open]');
     var groups = sec.querySelectorAll('[data-group]');
-    var panel = sec.querySelector('[data-panel]');
     var back = sec.querySelector('[data-back]');
     var more = sec.querySelector('[data-more]');
     var active = -1;
 
-    var scrollToEl = function (el, gap) {
-      window.scrollTo({ top: window.scrollY + el.getBoundingClientRect().top - demoH() - gap, behavior: behavior });
-    };
+    // заголовок блока ушёл выше экрана — вернуть его под плашку демо (он не двигается при анимации ленты)
+    function toHeading() {
+      if (heading.getBoundingClientRect().top < demoH()) {
+        window.scrollTo({ top: window.scrollY + heading.getBoundingClientRect().top - demoH() - 12, behavior: behavior });
+      }
+    }
     function open(i) {
       active = i;
       groups.forEach(function (g) { g.classList.toggle('is-active', +g.getAttribute('data-group') === i); });
       topCards.forEach(function (c) { c.setAttribute('aria-pressed', String(+c.getAttribute('data-open') === i)); });
       bottomCards.forEach(function (c) { c.hidden = +c.getAttribute('data-open') === i; });
+      sec.classList.toggle('is-open', i >= 0);
+      topBox.classList.toggle('is-hidden', i >= 0);
+      topBox.inert = i >= 0;
       back.hidden = i < 0;
       more.hidden = i < 0;
       hsTop.update();
       hsBottom.update();
-      if (i >= 0) reveal(hsTop.track, topCards[i], true);
     }
     topCards.forEach(function (card) {
       card.addEventListener('click', function () {
-        var i = +card.getAttribute('data-open');
-        if (i === active) return;
-        open(i);
-        // сетка открылась ниже экрана — подтянуть её начало
-        var y = panel.getBoundingClientRect().top;
-        if (y > window.innerHeight * 0.6) scrollToEl(panel, 8);
+        open(+card.getAttribute('data-open'));
+        back.focus({ preventScroll: true });
+        toHeading();
       });
     });
     bottomCards.forEach(function (card) {
       card.addEventListener('click', function () {
         open(+card.getAttribute('data-open'));
         hsBottom.track.scrollTo({ left: 0 });
-        scrollToEl(panel, 8); // новая сетка — с начала, без прокрутки наверх вручную
+        back.focus({ preventScroll: true });
+        toHeading(); // новая сетка — с начала, без прокрутки наверх вручную
       });
     });
     back.addEventListener('click', function () {
       var was = active;
       open(-1);
-      scrollToEl(top, 70);
-      if (was >= 0) topCards[was].focus({ preventScroll: true });
+      if (was >= 0) {
+        reveal(hsTop.track, topCards[was], false); // прошлая категория — в поле зрения ленты
+        topCards[was].focus({ preventScroll: true });
+      }
+      toHeading();
     });
     // фото не загрузилось — остаётся градиент с эмодзи
     sec.querySelectorAll('img').forEach(function (img) {

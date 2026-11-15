@@ -172,6 +172,7 @@ p { margin: 0 0 .75em; }
 /* ---------- Автосервисы: лента категорий → сетка услуг ---------- */
 .svc__hint { display: none; }
 .svc.is-ready .svc__hint { display: inline; }
+.svc.is-open .svc__hint { display: none; }
 /* лента категорий (без JS скрыта — тогда все категории показаны подряд) */
 .rail { display: none; position: relative; margin: 0 calc(-1 * var(--gutter)); color: var(--ink); }
 .svc.is-ready .rail { display: block; }
@@ -221,6 +222,18 @@ p { margin: 0 0 .75em; }
 .rail .hs-btn:hover { background: rgba(0,0,0,.75); }
 .rail .hs-btn--prev { left: 8px; }
 .rail .hs-btn--next { right: 8px; }
+
+/* верхняя лента видна только на экране выбора категории: при открытой сетке плавно схлопывается и уходит вверх */
+.svc-top {
+  display: grid; grid-template-rows: 1fr;
+  transition: grid-template-rows .45s var(--ease), opacity .3s ease, transform .45s var(--ease), visibility 0s;
+}
+.svc-top > .rail { min-height: 0; overflow: hidden; }
+.svc-top.is-hidden {
+  grid-template-rows: 0fr; opacity: 0; transform: translateY(-14px); visibility: hidden;
+  transition: grid-template-rows .45s var(--ease), opacity .25s ease, transform .45s var(--ease), visibility 0s .45s;
+}
+.svc-back:not([hidden]) { animation: svc-in .4s var(--ease); }
 
 /* открытая категория: «Назад», заголовок, сетка, лента остальных категорий */
 .svc-back {
@@ -348,7 +361,7 @@ p { margin: 0 0 .75em; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .fab, .btn, .spy__chip, .rail__card, .rail__img img, .svc-item, .svc-item__media img, .svc-group { transition: none; animation: none; }
+  .fab, .btn, .spy__chip, .rail__card, .rail__img img, .svc-item, .svc-item__media img, .svc-group, .svc-top, .svc-back { transition: none; animation: none; }
 }
 
 /* ---------- простое меню без аккордеонов (services.layout = "list"), тёмно-кофейный фон ---------- */
