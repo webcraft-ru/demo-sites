@@ -272,13 +272,14 @@ p { margin: 0 0 .75em; }
 .svc-item:hover .svc-item__media img { transform: scale(1.06); }
 .svc-item__body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; padding: 10px 11px 12px; }
 /* длинное название переносится внутри карточки, ширина карточки не меняется */
-.svc-item__name { font-weight: 700; font-size: .9rem; line-height: 1.28; overflow-wrap: anywhere; hyphens: auto; }
+.svc-item__name { font-weight: 800; font-size: 17px; line-height: 1.25; overflow-wrap: anywhere; hyphens: auto; }
 .svc-item__desc { font-size: .78rem; line-height: 1.3; color: var(--muted); overflow-wrap: anywhere; }
 .svc-item__price {
   margin-top: auto; align-self: flex-start; max-width: 100%; padding: 5px 10px; border-radius: 999px;
-  background: var(--accent); color: var(--accent-ink); font-weight: 800; font-size: .92rem; overflow-wrap: anywhere;
+  background: var(--accent); color: var(--accent-ink); font-weight: 800; font-size: 14.5px; line-height: 1.25; overflow-wrap: anywhere;
 }
-/* без фото: строгая текстовая карточка — название и цена, без иконок и градиентов */
+/* ЗАФИКСИРОВАНО (только автосервисы): карточка без фото — тёмно-синий градиент, оранжевая обводка, тень,
+   оранжевый текст, без полосы сверху, без иконок/эмодзи. Не менять без запроса. Кофейни эти классы не используют. */
 .svc-item--text, .rail__card--text {
   position: relative;
   background: linear-gradient(155deg, #21365a 0%, #141c2b 55%, #0a0d13 100%);
@@ -293,7 +294,7 @@ p { margin: 0 0 .75em; }
 .svc-item--text .svc-item__name { color: #fff; }
 .svc-item--text .svc-item__desc { color: #b7c3d6; }
 .svc-item--text .svc-item__price {
-  padding: 0; background: none; border-radius: 0; color: #ff9d4d; font-size: 1.15rem; font-weight: 850; letter-spacing: .01em;
+  padding: 0; background: none; border-radius: 0; color: #ff9d4d; font-size: 14.5px; font-weight: 800; letter-spacing: .01em;
   text-shadow: 0 0 18px color-mix(in srgb, var(--accent) 45%, transparent);
 }
 .rail__card--text .rail__text { padding: 20px 15px 16px; justify-content: center; min-height: 96px; gap: 6px; }
