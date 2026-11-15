@@ -35,7 +35,21 @@
 
 <section class="section menu-list menu-list--plain" id="services" style="--ml-bg:#f7eedb;--ml-ink:#33240f;--ml-muted:#705f41;--ml-accent:#945d22;--ml-card:#fcf6e8;--ml-line:rgba(70,45,10,.10)"><div class="wrap">
   <h2>Меню и цены</h2>
-    <div class="ml__group">
+  <span class="filter-anchor" data-filter-anchor></span>
+  <div class="filter" data-filter hidden>
+    <div class="filter__track" role="group" aria-label="Фильтр по разделам">
+      <button class="chip" type="button" data-f="all" aria-pressed="true">Все <span class="chip__n">42</span></button>
+      <button class="chip" type="button" data-f="0" aria-pressed="false"><span aria-hidden="true">☕</span>Классика <span class="chip__n">12</span></button>
+      <button class="chip" type="button" data-f="1" aria-pressed="false"><span aria-hidden="true">🍊</span>Фреш <span class="chip__n">1</span></button>
+      <button class="chip" type="button" data-f="2" aria-pressed="false"><span aria-hidden="true">✨</span>Авторские напитки <span class="chip__n">7</span></button>
+      <button class="chip" type="button" data-f="3" aria-pressed="false"><span aria-hidden="true">🧊</span>Со льдом и лимонады <span class="chip__n">7</span></button>
+      <button class="chip" type="button" data-f="4" aria-pressed="false"><span aria-hidden="true">➕</span>Допы <span class="chip__n">3</span></button>
+      <button class="chip" type="button" data-f="5" aria-pressed="false"><span aria-hidden="true">🍳</span>Завтраки <span class="chip__n">5</span></button>
+      <button class="chip" type="button" data-f="6" aria-pressed="false"><span aria-hidden="true">🥪</span>Сэндвичи <span class="chip__n">5</span></button>
+      <button class="chip" type="button" data-f="7" aria-pressed="false"><span aria-hidden="true">🍰</span>Сладкое <span class="chip__n">2</span></button>
+    </div>
+  </div>
+    <div class="ml__group" data-cat="0">
       <h3 class="ml__title">Классика</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/brioshh/services/001-espresso.jpg" alt="Эспрессо" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Эспрессо</span><span class="ml__price">220 ₽</span></span></li>
@@ -52,13 +66,13 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/brioshh/services/1022-chicory-with-milk.jpg" alt="Цикорий на молоке" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Цикорий на молоке</span><span class="ml__price">230 / 290 ₽</span><span class="ml__desc">200 / 300 мл</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="1">
       <h3 class="ml__title">Фреш</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/brioshh/services/013-apelsin-greypfrut-320-530.jpg" alt="Апельсин / грейпфрут" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Апельсин / грейпфрут</span><span class="ml__price">320 / 530 ₽</span><span class="ml__desc">200 / 350 мл</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="2">
       <h3 class="ml__title">Авторские напитки</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/brioshh/services/014-glintveyn.jpg" alt="Глинтвейн" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Глинтвейн</span><span class="ml__price">320 ₽</span></span></li>
@@ -70,7 +84,7 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/brioshh/services/020-kivi-ananas.jpg" alt="Чай «Киви-ананас»" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Чай «Киви-ананас»</span><span class="ml__price">360 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="3">
       <h3 class="ml__title">Со льдом и лимонады</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/brioshh/services/021-espresso-tonik.jpg" alt="Эспрессо-тоник" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Эспрессо-тоник</span><span class="ml__price">340 ₽</span></span></li>
@@ -82,7 +96,7 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/brioshh/services/1023-lemonades-assortment.jpg" alt="Лимонады в ассортименте" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Лимонады в ассортименте</span><span class="ml__price">320 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="4">
       <h3 class="ml__title">Допы</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/brioshh/services/1024-alternative-milk.jpg" alt="Альтернативное молоко" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Альтернативное молоко</span><span class="ml__price">100 ₽</span></span></li>
@@ -90,7 +104,7 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/brioshh/services/1026-espresso-shot.jpg" alt="Шот эспрессо" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Шот эспрессо</span><span class="ml__price">90 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="5">
       <h3 class="ml__title">Завтраки</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/brioshh/services/031-angliyskiy-zavtrak.jpg" alt="Английский завтрак" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Английский завтрак</span><span class="ml__price">590 ₽</span><span class="ml__desc">Глазунья, свино-говяжья колбаска, шампиньоны, фасоль в томатном барбекю, бекон, помидоры черри, бриошь</span></span></li>
@@ -100,7 +114,7 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/brioshh/services/035-tomatnaya-ovsyanka-s-yaycom-pashot-i-bekon.jpg" alt="Томатная овсянка с яйцом пашот и беконом / креветками" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Томатная овсянка с яйцом пашот и беконом / креветками</span><span class="ml__price">430 / 550 ₽</span><span class="ml__desc">Томаты, овсянка, яйцо пашот, пармезан. Цена: с беконом / с креветками</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="6">
       <h3 class="ml__title">Сэндвичи</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/brioshh/services/036-sendvich-s-pastrami-iz-indeyki.jpg" alt="Сэндвич с пастрами из индейки" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Сэндвич с пастрами из индейки</span><span class="ml__price">590 ₽</span><span class="ml__desc">Пастрами, медово-горчичный соус, сыр гауда, маринованный лук, листья салата</span></span></li>
@@ -110,7 +124,7 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/brioshh/services/040-sendvich-s-tambovskim-okorokom.jpg" alt="Сэндвич с тамбовским окороком" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Сэндвич с тамбовским окороком</span><span class="ml__price">590 ₽</span><span class="ml__desc">Тамбовский окорок, соус ранч, сыр чеддер, салат айсберг, чипсы</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="7">
       <h3 class="ml__title">Сладкое</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/brioshh/services/041-ovsyanaya-kasha-so-smorodinoy-i-vanilnym-s.jpg" alt="Овсяная каша со смородиной и ванильным соусом" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Овсяная каша со смородиной и ванильным соусом</span><span class="ml__price">360 ₽</span><span class="ml__desc">Овсяная каша на молоке, ванильный соус, смородиновый джем</span></span></li>

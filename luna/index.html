@@ -35,7 +35,30 @@
 
 <section class="section menu-list menu-list--plain" id="services" style="--ml-bg:#f6e9e8;--ml-ink:#2e1a1f;--ml-muted:#71585e;--ml-accent:#a8445c;--ml-card:#fcf3f1;--ml-line:rgba(60,20,30,.10)"><div class="wrap">
   <h2>Меню и цены</h2>
-    <div class="ml__group">
+  <span class="filter-anchor" data-filter-anchor></span>
+  <div class="filter" data-filter hidden>
+    <div class="filter__track" role="group" aria-label="Фильтр по разделам">
+      <button class="chip" type="button" data-f="all" aria-pressed="true">Все <span class="chip__n">100</span></button>
+      <button class="chip" type="button" data-f="0" aria-pressed="false"><span aria-hidden="true">🍳</span>Шеф-меню: завтраки <span class="chip__n">5</span></button>
+      <button class="chip" type="button" data-f="1" aria-pressed="false"><span aria-hidden="true">🥗</span>Салаты <span class="chip__n">3</span></button>
+      <button class="chip" type="button" data-f="2" aria-pressed="false"><span aria-hidden="true">🍲</span>Горячие блюда и закуски <span class="chip__n">6</span></button>
+      <button class="chip" type="button" data-f="3" aria-pressed="false"><span aria-hidden="true">☕</span>Авторские напитки <span class="chip__n">9</span></button>
+      <button class="chip" type="button" data-f="4" aria-pressed="false"><span aria-hidden="true">☕</span>Классические напитки <span class="chip__n">11</span></button>
+      <button class="chip" type="button" data-f="5" aria-pressed="false"><span aria-hidden="true">🧸</span>Детское меню <span class="chip__n">2</span></button>
+      <button class="chip" type="button" data-f="6" aria-pressed="false"><span aria-hidden="true">➕</span>Добавки в напиток <span class="chip__n">12</span></button>
+      <button class="chip" type="button" data-f="7" aria-pressed="false"><span aria-hidden="true">🍫</span>Какао и сладкие напитки <span class="chip__n">3</span></button>
+      <button class="chip" type="button" data-f="8" aria-pressed="false"><span aria-hidden="true">🫖</span>Согревающие напитки <span class="chip__n">6</span></button>
+      <button class="chip" type="button" data-f="9" aria-pressed="false"><span aria-hidden="true">🍵</span>Другое <span class="chip__n">5</span></button>
+      <button class="chip" type="button" data-f="10" aria-pressed="false"><span aria-hidden="true">🧊</span>Охлаждающие напитки <span class="chip__n">7</span></button>
+      <button class="chip" type="button" data-f="11" aria-pressed="false"><span aria-hidden="true">🍹</span>Коктейли, фреши и лимонады <span class="chip__n">11</span></button>
+      <button class="chip" type="button" data-f="12" aria-pressed="false"><span aria-hidden="true">🥐</span>Круассаны <span class="chip__n">3</span></button>
+      <button class="chip" type="button" data-f="13" aria-pressed="false"><span aria-hidden="true">🥣</span>Кухня: завтраки <span class="chip__n">2</span></button>
+      <button class="chip" type="button" data-f="14" aria-pressed="false"><span aria-hidden="true">🧇</span>Венские вафли <span class="chip__n">4</span></button>
+      <button class="chip" type="button" data-f="15" aria-pressed="false"><span aria-hidden="true">🥪</span>Сэндвичи на гриле <span class="chip__n">4</span></button>
+      <button class="chip" type="button" data-f="16" aria-pressed="false"><span aria-hidden="true">🍕</span>Римская пицца 20x30 <span class="chip__n">7</span></button>
+    </div>
+  </div>
+    <div class="ml__group" data-cat="0">
       <h3 class="ml__title">Шеф-меню: завтраки</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/001-angliyskiy-zavtrak.jpg" alt="Английский завтрак" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Английский завтрак</span><span class="ml__price">400 ₽</span></span></li>
@@ -45,7 +68,7 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/005-chia-puding.jpg" alt="Чиа-пудинг" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Чиа-пудинг</span><span class="ml__price">230 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="1">
       <h3 class="ml__title">Салаты</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/006-rukkola-s-krevetkami.jpg" alt="Руккола с креветками" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Руккола с креветками</span><span class="ml__price">600 ₽</span></span></li>
@@ -53,7 +76,7 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/008-italyanskiy.jpg" alt="Итальянский" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Итальянский</span><span class="ml__price">500 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="2">
       <h3 class="ml__title">Горячие блюда и закуски</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/009-syrnyy-sup-kapuchino.jpg" alt="Сырный суп-капучино" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Сырный суп-капучино</span><span class="ml__price">550 ₽</span></span></li>
@@ -64,7 +87,7 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/014-aranchini-s-syrnym-sousom.jpg" alt="Аранчини с сырным соусом" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Аранчини с сырным соусом</span><span class="ml__price">350 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="3">
       <h3 class="ml__title">Авторские напитки</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/015-arahisovyy-kapuchino.jpg" alt="Арахисовый капучино" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Арахисовый капучино</span><span class="ml__price">370 ₽</span></span></li>
@@ -78,7 +101,7 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/023-raf-imbirnyy-pryanik.jpg" alt="Раф «Имбирный пряник»" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Раф «Имбирный пряник»</span><span class="ml__price">450 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="4">
       <h3 class="ml__title">Классические напитки</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/024-espresso.jpg" alt="Эспрессо" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Эспрессо</span><span class="ml__price">180 ₽</span></span></li>
@@ -94,14 +117,14 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/034-glyase.jpg" alt="Глясе" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Глясе</span><span class="ml__price">280 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="5">
       <h3 class="ml__title">Детское меню</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/035-teplyy-molochnyy-kokteyl-180-200-220.jpg" alt="Тёплый молочный коктейль" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Тёплый молочный коктейль</span><span class="ml__price">180 / 200 / 220 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/036-detskiy-kapuchino-220-270.jpg" alt="Детский капучино" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Детский капучино</span><span class="ml__price">220 / 270 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="6">
       <h3 class="ml__title">Добавки в напиток</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/1057-espresso-shot.jpg" alt="Шот эспрессо" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Шот эспрессо</span><span class="ml__price">70 ₽</span></span></li>
@@ -118,15 +141,15 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/1068-decaf-beans.jpg" alt="Декаф зерно" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Декаф зерно</span><span class="ml__price">20 / 40 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="7">
       <h3 class="ml__title">Какао и сладкие напитки</h3>
-      <ul class="ml__list">
+      <ul class="ml__list ml__list--dense">
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/1069-cocoa-with-marshmallows.jpg" alt="Какао с маршмеллоу" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Какао с маршмеллоу</span><span class="ml__price">260 / 360 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/1070-latte-kinder.jpg" alt="Латте «Киндер»" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Латте «Киндер»</span><span class="ml__price">400 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/1071-book-girl.jpg" alt="«Книжная девочка»" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">«Книжная девочка»</span><span class="ml__price">400 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="8">
       <h3 class="ml__title">Согревающие напитки</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/052-listovoy-chay-100-120-140-180.jpg" alt="Листовой чай" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Листовой чай</span><span class="ml__price">100 / 120 / 140 / 180 ₽</span></span></li>
@@ -137,7 +160,7 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/057-oblepihovyy-toddi.jpg" alt="Облепиховый тодди" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Облепиховый тодди</span><span class="ml__price">330 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="9">
       <h3 class="ml__title">Другое</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/058-kakao-200-250.jpg" alt="Какао" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Какао</span><span class="ml__price">200 / 250 ₽</span></span></li>
@@ -147,9 +170,9 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/062-grog-pryanaya-tykva-260-290.jpg" alt="Грог «Пряная тыква»" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Грог «Пряная тыква»</span><span class="ml__price">260 / 290 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="10">
       <h3 class="ml__title">Охлаждающие напитки</h3>
-      <ul class="ml__list">
+      <ul class="ml__list ml__list--dense">
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/063-ays-latte-280-340.jpg" alt="Айс-латте" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Айс-латте</span><span class="ml__price">280 / 340 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/064-ays-bambl.jpg" alt="Айс-бамбл" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Айс-бамбл</span><span class="ml__price">360 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/065-ays-bambl-na-freshe.jpg" alt="Айс-бамбл на фреше" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Айс-бамбл на фреше</span><span class="ml__price">490 ₽</span></span></li>
@@ -159,7 +182,7 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/069-ays-matcha-latte-280-340.jpg" alt="Айс-матча-латте" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Айс-матча-латте</span><span class="ml__price">280 / 340 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="11">
       <h3 class="ml__title">Коктейли, фреши и лимонады</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/070-milksheyk-250-280.jpg" alt="Милкшейк" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Милкшейк</span><span class="ml__price">250 / 280 ₽</span></span></li>
@@ -175,7 +198,7 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/077-limonady.jpg" alt="Лимонад «Лесные ягоды»" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Лимонад «Лесные ягоды»</span><span class="ml__price">250 / 290 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="12">
       <h3 class="ml__title">Круассаны</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/078-kruassany-klassicheskiy.jpg" alt="Круассан классический" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Круассан классический</span><span class="ml__price">180 ₽</span></span></li>
@@ -183,32 +206,32 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/080-sladkiy.jpg" alt="Круассан сладкий" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Круассан сладкий</span><span class="ml__price">250 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="13">
       <h3 class="ml__title">Кухня: завтраки</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/081-kasha-ovsyanaya-s-yagodami.jpg" alt="Каша овсяная с ягодами" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Каша овсяная с ягодами</span><span class="ml__price">300 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/082-syrniki.jpg" alt="Сырники" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Сырники</span><span class="ml__price">350 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="14">
       <h3 class="ml__title">Венские вафли</h3>
-      <ul class="ml__list">
+      <ul class="ml__list ml__list--dense">
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/1075-waffle-plain.jpg" alt="Вафля без начинки" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Вафля без начинки</span><span class="ml__price">200 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/1076-waffle-with-bacon.jpg" alt="Вафля с беконом" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Вафля с беконом</span><span class="ml__price">350 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/1077-waffle-with-fish.jpg" alt="Вафля с рыбой" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Вафля с рыбой</span><span class="ml__price">420 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/1078-waffle-with-ice-cream.jpg" alt="Вафля с мороженым" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Вафля с мороженым</span><span class="ml__price">260 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="15">
       <h3 class="ml__title">Сэндвичи на гриле</h3>
-      <ul class="ml__list">
+      <ul class="ml__list ml__list--dense">
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/1079-sandwich-chicken.jpg" alt="Сэндвич с курицей" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Сэндвич с курицей</span><span class="ml__price">350 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/1080-sandwich-bacon.jpg" alt="Сэндвич с беконом" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Сэндвич с беконом</span><span class="ml__price">380 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/1081-sandwich-salmon.jpg" alt="Сэндвич с сёмгой" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Сэндвич с сёмгой</span><span class="ml__price">420 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/090-ruletik-s-bekonom.jpg" alt="Рулетик с беконом" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Рулетик с беконом</span><span class="ml__price">300 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="16">
       <h3 class="ml__title">Римская пицца 20x30</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/luna/services/091-chiz-karbonara.jpg" alt="Пицца «Чиз-карбонара»" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Пицца «Чиз-карбонара»</span><span class="ml__price">700 ₽</span></span></li>

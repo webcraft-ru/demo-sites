@@ -35,7 +35,18 @@
 
 <section class="section menu-list menu-list--plain" id="services" style="--ml-bg:#f3eadf;--ml-ink:#2b1d16;--ml-muted:#6b5b50;--ml-accent:#9d4a29;--ml-card:#fbf5ec;--ml-line:rgba(60,35,20,.10)"><div class="wrap">
   <h2>Меню и цены</h2>
-    <div class="ml__group">
+  <span class="filter-anchor" data-filter-anchor></span>
+  <div class="filter" data-filter hidden>
+    <div class="filter__track" role="group" aria-label="Фильтр по разделам">
+      <button class="chip" type="button" data-f="all" aria-pressed="true">Все <span class="chip__n">20</span></button>
+      <button class="chip" type="button" data-f="0" aria-pressed="false"><span aria-hidden="true">🥪</span>Сэндвичи <span class="chip__n">6</span></button>
+      <button class="chip" type="button" data-f="1" aria-pressed="false"><span aria-hidden="true">🍳</span>Завтраки <span class="chip__n">5</span></button>
+      <button class="chip" type="button" data-f="2" aria-pressed="false"><span aria-hidden="true">🧇</span>Закуски <span class="chip__n">4</span></button>
+      <button class="chip" type="button" data-f="3" aria-pressed="false"><span aria-hidden="true">🍽️</span>Основные блюда <span class="chip__n">2</span></button>
+      <button class="chip" type="button" data-f="4" aria-pressed="false"><span aria-hidden="true">🍲</span>Супы <span class="chip__n">3</span></button>
+    </div>
+  </div>
+    <div class="ml__group" data-cat="0">
       <h3 class="ml__title">Сэндвичи</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/osnova/services/001-sendvich-s-hrustyaschim-cyplenkom.jpg" alt="Сэндвич с хрустящим цыплёнком" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Сэндвич с хрустящим цыплёнком</span><span class="ml__price">450 ₽</span><span class="ml__desc">Бриошь, соус 1000 островов, салат айсберг, томаты, цыплёнок в панировке, маринованные огурцы, сыр чеддер</span></span></li>
@@ -46,7 +57,7 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/osnova/services/006-sendvich-s-bekonom-i-sousom-cezar.jpg" alt="Сэндвич с беконом и соусом цезарь" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Сэндвич с беконом и соусом цезарь</span><span class="ml__price">320 ₽</span><span class="ml__desc">Тостовый хлеб, соус цезарь, салат айсберг, томаты, цыплёнок су-вид, бекон</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="1">
       <h3 class="ml__title">Завтраки</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/osnova/services/007-omlet.jpg" alt="Омлет" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Омлет</span><span class="ml__price">370 ₽</span><span class="ml__desc">Черри, микс салат, творожный сыр, цельнозерновой тост</span></span></li>
@@ -56,7 +67,7 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/osnova/services/011-syrniki-so-smetanoy-i-dzhemom.jpg" alt="Сырники со сметаной и джемом" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Сырники со сметаной и джемом</span><span class="ml__price">300 ₽</span><span class="ml__desc">2 сырника, сметана, ягодный джем, миндаль, свежая голубика</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="2">
       <h3 class="ml__title">Закуски</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/osnova/services/012-vaflya-benedikt-s-lososem.jpg" alt="Вафля Бенедикт с лососем" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Вафля Бенедикт с лососем</span><span class="ml__price">570 ₽</span><span class="ml__desc">Картофельная вафля, творожный сыр, лосось, свежие огурцы, яйцо пашот, соус голландез</span></span></li>
@@ -65,14 +76,14 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/osnova/services/1099-french-fries.jpg" alt="Картофель фри" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Картофель фри</span><span class="ml__price">180 ₽</span><span class="ml__desc">Соус на выбор: сырный, кетчуп, 1000 островов, ранч, спайси</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="3">
       <h3 class="ml__title">Основные блюда</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/osnova/services/016-boul-s-krevetkoy.jpg" alt="Боул с креветкой" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Боул с креветкой</span><span class="ml__price">550 ₽</span><span class="ml__desc">Рис басмати, креветки в азиатском стиле, брокколи, микс зелени, черри, маринованный красный лук, кунжутный соус</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/osnova/services/017-kurinye-bitochki-s-pyure.jpg" alt="Куриные биточки с пюре" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Куриные биточки с пюре</span><span class="ml__price">220 ₽</span><span class="ml__desc">Котлетки из куриного филе, картофельное пюре, зелёное масло</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="4">
       <h3 class="ml__title">Супы</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/osnova/services/018-kurinyy-sup-lapsha.jpg" alt="Куриный суп-лапша" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Куриный суп-лапша</span><span class="ml__price">380 ₽</span><span class="ml__desc">Куриный бульон, фрикадельки су-вид, морковь, лапша удон, петрушка</span></span></li>

@@ -36,8 +36,23 @@
 <section class="section" id="services"><div class="wrap">
   <h2>Услуги и цены</h2>
   <p class="section__lead">174 услуги в 9 разделах. Нажмите на раздел, чтобы увидеть цены.</p>
+  <span class="filter-anchor" data-filter-anchor></span>
+  <div class="filter" data-filter hidden>
+    <div class="filter__track" role="group" aria-label="Фильтр по разделам">
+      <button class="chip" type="button" data-f="all" aria-pressed="true">Все <span class="chip__n">174</span></button>
+      <button class="chip" type="button" data-f="0" aria-pressed="false"><span aria-hidden="true">🛢️</span>ТО и масла <span class="chip__n">14</span></button>
+      <button class="chip" type="button" data-f="1" aria-pressed="false"><span aria-hidden="true">💻</span>Диагностика <span class="chip__n">3</span></button>
+      <button class="chip" type="button" data-f="2" aria-pressed="false"><span aria-hidden="true">🛑</span>Тормозная система <span class="chip__n">21</span></button>
+      <button class="chip" type="button" data-f="3" aria-pressed="false"><span aria-hidden="true">🔩</span>Подвеска и рулевое <span class="chip__n">27</span></button>
+      <button class="chip" type="button" data-f="4" aria-pressed="false"><span aria-hidden="true">🔧</span>Двигатель <span class="chip__n">36</span></button>
+      <button class="chip" type="button" data-f="5" aria-pressed="false"><span aria-hidden="true">⚙️</span>Трансмиссия <span class="chip__n">21</span></button>
+      <button class="chip" type="button" data-f="6" aria-pressed="false"><span aria-hidden="true">💡</span>Автоэлектрика <span class="chip__n">22</span></button>
+      <button class="chip" type="button" data-f="7" aria-pressed="false"><span aria-hidden="true">💨</span>Выхлопная система <span class="chip__n">6</span></button>
+      <button class="chip" type="button" data-f="8" aria-pressed="false"><span aria-hidden="true">🧽</span>Мойка и детейлинг <span class="chip__n">24</span></button>
+    </div>
+  </div>
   <div class="accs">
-    <div class="acc" data-acc>
+    <div class="acc" data-acc data-cat="0">
       <h3 class="acc__head">
         <button class="acc__btn" type="button" aria-expanded="false" aria-controls="acc-to" id="acc-btn-to">
           <span class="acc__thumb" aria-hidden="true">🛢️<img src="../images/smartauto/services/001-zamena-masla.jpg" alt="" loading="lazy" width="80" height="80"></span>
@@ -181,7 +196,7 @@
         </div>
       </div>
     </div>
-    <div class="acc" data-acc>
+    <div class="acc" data-acc data-cat="1">
       <h3 class="acc__head">
         <button class="acc__btn" type="button" aria-expanded="false" aria-controls="acc-diag" id="acc-btn-diag">
           <span class="acc__thumb" aria-hidden="true">💻<img src="../images/smartauto/services/015-diagnostika-avtomobilya.jpg" alt="" loading="lazy" width="80" height="80"></span>
@@ -226,7 +241,7 @@
         </div>
       </div>
     </div>
-    <div class="acc" data-acc>
+    <div class="acc" data-acc data-cat="2">
       <h3 class="acc__head">
         <button class="acc__btn" type="button" aria-expanded="false" aria-controls="acc-brakes" id="acc-btn-brakes">
           <span class="acc__thumb" aria-hidden="true">🛑<img src="../images/smartauto/services/018-zamena-tormoznyh-kolodok.jpg" alt="" loading="lazy" width="80" height="80"></span>
@@ -433,7 +448,7 @@
         </div>
       </div>
     </div>
-    <div class="acc" data-acc>
+    <div class="acc" data-acc data-cat="3">
       <h3 class="acc__head">
         <button class="acc__btn" type="button" aria-expanded="false" aria-controls="acc-susp" id="acc-btn-susp">
           <span class="acc__thumb" aria-hidden="true">🔩<img src="../images/smartauto/services/039-shod-razval.jpg" alt="" loading="lazy" width="80" height="80"></span>
@@ -694,7 +709,7 @@
         </div>
       </div>
     </div>
-    <div class="acc" data-acc>
+    <div class="acc" data-acc data-cat="4">
       <h3 class="acc__head">
         <button class="acc__btn" type="button" aria-expanded="false" aria-controls="acc-engine" id="acc-btn-engine">
           <span class="acc__thumb" aria-hidden="true">🔧<img src="../images/smartauto/services/066-zamena-remnya-grm.jpg" alt="" loading="lazy" width="80" height="80"></span>
@@ -1036,7 +1051,7 @@
         </div>
       </div>
     </div>
-    <div class="acc" data-acc>
+    <div class="acc" data-acc data-cat="5">
       <h3 class="acc__head">
         <button class="acc__btn" type="button" aria-expanded="false" aria-controls="acc-trans" id="acc-btn-trans">
           <span class="acc__thumb" aria-hidden="true">⚙️<img src="../images/smartauto/services/102-zamena-scepleniya.jpg" alt="" loading="lazy" width="80" height="80"></span>
@@ -1243,7 +1258,7 @@
         </div>
       </div>
     </div>
-    <div class="acc" data-acc>
+    <div class="acc" data-acc data-cat="6">
       <h3 class="acc__head">
         <button class="acc__btn" type="button" aria-expanded="false" aria-controls="acc-elec" id="acc-btn-elec">
           <span class="acc__thumb" aria-hidden="true">💡<img src="../images/smartauto/services/123-zamena-zamka-zazhiganiya.jpg" alt="" loading="lazy" width="80" height="80"></span>
@@ -1459,7 +1474,7 @@
         </div>
       </div>
     </div>
-    <div class="acc" data-acc>
+    <div class="acc" data-acc data-cat="7">
       <h3 class="acc__head">
         <button class="acc__btn" type="button" aria-expanded="false" aria-controls="acc-exhaust" id="acc-btn-exhaust">
           <span class="acc__thumb" aria-hidden="true">💨<img src="../images/smartauto/services/145-svarochnye-raboty-glushitelya.jpg" alt="" loading="lazy" width="80" height="80"></span>
@@ -1531,7 +1546,7 @@
         </div>
       </div>
     </div>
-    <div class="acc" data-acc>
+    <div class="acc" data-acc data-cat="8">
       <h3 class="acc__head">
         <button class="acc__btn" type="button" aria-expanded="false" aria-controls="acc-wash" id="acc-btn-wash">
           <span class="acc__thumb" aria-hidden="true">🧽<img src="../images/smartauto/services/151-polirovka-kuzova.jpg" alt="" loading="lazy" width="80" height="80"></span>

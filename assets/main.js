@@ -1,5 +1,5 @@
 // Общий скрипт демо-сайтов:
-// 1) аккордеоны (плавное раскрытие + подгрузка фото только при открытии),
+// 1) аккордеоны (плавное раскрытие + подгрузка фото только при открытии), фильтр каталога по разделам,
 // 2) бейдж «Открыто до…», 3) плавающая кнопка звонка.
 (function () {
   // ---------- 1. Аккордеоны ----------
@@ -22,6 +22,42 @@
       acc.classList.toggle('is-open', open);
       btn.setAttribute('aria-expanded', String(open));
       body.inert = !open;
+    });
+  });
+
+  // ---------- 1а. Высота плашки демо (на узком экране она в 2 строки) — для липкой панели фильтра ----------
+  var demoBar = document.querySelector('.demo-bar');
+  var demoH = function () { return demoBar ? demoBar.offsetHeight : 0; };
+  function setDemoH() { if (demoBar) document.documentElement.style.setProperty('--demo-h', demoH() + 'px'); }
+  setDemoH();
+  window.addEventListener('resize', setDemoH);
+
+  // ---------- 1б. Фильтр каталога по разделам ----------
+  document.querySelectorAll('[data-filter]').forEach(function (bar) {
+    var section = bar.closest('section');
+    var anchor = section.querySelector('[data-filter-anchor]');
+    var track = bar.querySelector('.filter__track');
+    var chips = bar.querySelectorAll('[data-f]');
+    var groups = section.querySelectorAll('[data-cat]');
+    bar.hidden = false;
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        var f = chip.getAttribute('data-f');
+        // панель уже прилипла (каталог прокручен) — после фильтрации вернуть начало каталога под панель
+        var stuck = anchor.getBoundingClientRect().top < demoH() + 1;
+        chips.forEach(function (c) { c.setAttribute('aria-pressed', String(c === chip)); });
+        groups.forEach(function (g) {
+          var show = f === 'all' || g.getAttribute('data-cat') === f;
+          g.hidden = !show;
+          // аккордеон: выбранный раздел сразу раскрываем
+          if (show && f !== 'all' && g.hasAttribute('data-acc') && !g.classList.contains('is-open')) g.querySelector('.acc__btn').click();
+        });
+        // выбранную кнопку — в центр полосы прокрутки
+        if (track.scrollWidth > track.clientWidth) {
+          track.scrollTo({ left: chip.offsetLeft - (track.clientWidth - chip.offsetWidth) / 2, behavior: 'smooth' });
+        }
+        if (stuck) window.scrollTo({ top: window.scrollY + anchor.getBoundingClientRect().top - demoH(), behavior: 'smooth' });
+      });
     });
   });
 

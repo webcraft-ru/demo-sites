@@ -35,7 +35,20 @@
 
 <section class="section menu-list menu-list--plain" id="services" style="--ml-bg:#f3eadf;--ml-ink:#2b1d16;--ml-muted:#6b5b50;--ml-accent:#a84a2a;--ml-card:#fbf5ec;--ml-line:rgba(60,35,20,.10)"><div class="wrap">
   <h2>Меню и цены</h2>
-    <div class="ml__group">
+  <span class="filter-anchor" data-filter-anchor></span>
+  <div class="filter" data-filter hidden>
+    <div class="filter__track" role="group" aria-label="Фильтр по разделам">
+      <button class="chip" type="button" data-f="all" aria-pressed="true">Все <span class="chip__n">40</span></button>
+      <button class="chip" type="button" data-f="0" aria-pressed="false"><span aria-hidden="true">🍳</span>Завтраки «весь день» <span class="chip__n">11</span></button>
+      <button class="chip" type="button" data-f="1" aria-pressed="false"><span aria-hidden="true">☕</span>Кофейные напитки <span class="chip__n">10</span></button>
+      <button class="chip" type="button" data-f="2" aria-pressed="false"><span aria-hidden="true">✨</span>Авторские напитки <span class="chip__n">7</span></button>
+      <button class="chip" type="button" data-f="3" aria-pressed="false"><span aria-hidden="true">🫖</span>Напитки <span class="chip__n">6</span></button>
+      <button class="chip" type="button" data-f="4" aria-pressed="false"><span aria-hidden="true">🍊</span>Свежевыжатые соки <span class="chip__n">2</span></button>
+      <button class="chip" type="button" data-f="5" aria-pressed="false"><span aria-hidden="true">➕</span>Добавки к напиткам <span class="chip__n">3</span></button>
+      <button class="chip" type="button" data-f="6" aria-pressed="false"><span aria-hidden="true">🍩</span>Пончики <span class="chip__n">1</span></button>
+    </div>
+  </div>
+    <div class="ml__group" data-cat="0">
       <h3 class="ml__title">Завтраки «весь день»</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/kruzhok/services/001-benedikt-losos.jpg" alt="Бенедикт лосось" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Бенедикт лосось</span><span class="ml__price">800 ₽</span><span class="ml__desc">1 шт. · Бриошь, лосось, яйца пашот, голландез, цедра лимона</span></span></li>
@@ -51,7 +64,7 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/kruzhok/services/011-oladushki-s-solenoy-karamelyu-i-morozhenym.jpg" alt="Оладушки с солёной карамелью и мороженым" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Оладушки с солёной карамелью и мороженым</span><span class="ml__price">550 ₽</span><span class="ml__desc">1 шт. · Оладьи, солёная карамель, шарик сливочного мороженого, хрустящий ореховый штрейзель</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="1">
       <h3 class="ml__title">Кофейные напитки</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/kruzhok/services/001-espresso.jpg" alt="Эспрессо" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Эспрессо</span><span class="ml__price">220 ₽</span><span class="ml__desc">Кофе из зёрен родом из Бразилии, напоминает о вкусе шоколада и орехов</span></span></li>
@@ -66,7 +79,7 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/kruzhok/services/021-raf-300-ml.jpg" alt="Раф 300 мл" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Раф 300 мл</span><span class="ml__price">350 ₽</span><span class="ml__desc">300 мл</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="2">
       <h3 class="ml__title">Авторские напитки</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/kruzhok/services/022-chay-malina-klyukva-rozmarin-500-ml.jpg" alt="Чай Малина-Клюква-Розмарин 500 мл" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Чай Малина-Клюква-Розмарин 500 мл</span><span class="ml__price">400 ₽</span><span class="ml__desc">500 мл · Ароматный ягодный чай с розмарином</span></span></li>
@@ -78,7 +91,7 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/kruzhok/services/028-chay-chernoplodnyy-s-shipovnikom-800-ml.jpg" alt="Чай Черноплодный с шиповником 800 мл" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Чай Черноплодный с шиповником 800 мл</span><span class="ml__price">600 ₽</span><span class="ml__desc">800 мл</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="3">
       <h3 class="ml__title">Напитки</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/kruzhok/services/029-matcha-200-ml.jpg" alt="Матча 200 мл" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Матча 200 мл</span><span class="ml__price">250 ₽</span><span class="ml__desc">200 мл</span></span></li>
@@ -89,14 +102,14 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/kruzhok/services/034-chay-listovoy-800-ml.jpg" alt="Чай листовой 800 мл" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Чай листовой 800 мл</span><span class="ml__price">350 ₽</span><span class="ml__desc">800 мл · Кавказский, Эрл Грей, Сенча, Молочный улун, Ассам, Мятный, Жасминовый, Успокаивающий, Ганпаудер</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="4">
       <h3 class="ml__title">Свежевыжатые соки</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/kruzhok/services/035-apelsinovyy-fresh-200-ml.jpg" alt="Апельсиновый фреш 200 мл" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Апельсиновый фреш 200 мл</span><span class="ml__price">400 ₽</span><span class="ml__desc">200 мл</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/kruzhok/services/036-apelsinovyy-fresh-300-ml.jpg" alt="Апельсиновый фреш 300 мл" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Апельсиновый фреш 300 мл</span><span class="ml__price">500 ₽</span><span class="ml__desc">300 мл</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="5">
       <h3 class="ml__title">Добавки к напиткам</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/kruzhok/services/1010-alternative-milk.jpg" alt="Альтернативное молоко" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Альтернативное молоко</span><span class="ml__price">120 ₽</span><span class="ml__desc">300 мл · Коровье безлактозное, кокосовое, миндальное, банановое или ванильный пломбир</span></span></li>
@@ -104,7 +117,7 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/kruzhok/services/1012-marshmallow.jpg" alt="Маршмеллоу" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Маршмеллоу</span><span class="ml__price">120 ₽</span><span class="ml__desc">4 шт.</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="6">
       <h3 class="ml__title">Пончики</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/kruzhok/services/040-ponchik-sguschenka.jpg" alt="Пончик Сгущенка" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Пончик Сгущенка</span><span class="ml__price">300 ₽</span><span class="ml__desc">1 шт. · Пончик с муссом из варёной сгущёнки, глазурь из солёной карамели, шоколадный штрейзель</span></span></li>

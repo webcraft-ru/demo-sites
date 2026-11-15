@@ -35,16 +35,28 @@
 
 <section class="section menu-list menu-list--plain" id="services" style="--ml-bg:#241c33;--ml-ink:#f4efe6;--ml-muted:#b3a9c4;--ml-accent:#e6b44f;--ml-card:rgba(255,255,255,.06);--ml-line:rgba(255,255,255,.13)"><div class="wrap">
   <h2>Меню и цены</h2>
-    <div class="ml__group">
+  <span class="filter-anchor" data-filter-anchor></span>
+  <div class="filter" data-filter hidden>
+    <div class="filter__track" role="group" aria-label="Фильтр по разделам">
+      <button class="chip" type="button" data-f="all" aria-pressed="true">Все <span class="chip__n">25</span></button>
+      <button class="chip" type="button" data-f="0" aria-pressed="false"><span aria-hidden="true">🥪</span>Сэндвичи <span class="chip__n">4</span></button>
+      <button class="chip" type="button" data-f="1" aria-pressed="false"><span aria-hidden="true">🍨</span>Мороженое <span class="chip__n">4</span></button>
+      <button class="chip" type="button" data-f="2" aria-pressed="false"><span aria-hidden="true">🍹</span>Лимонады <span class="chip__n">2</span></button>
+      <button class="chip" type="button" data-f="3" aria-pressed="false"><span aria-hidden="true">☕</span>Горячие напитки <span class="chip__n">2</span></button>
+      <button class="chip" type="button" data-f="4" aria-pressed="false"><span aria-hidden="true">🥤</span>Напитки <span class="chip__n">2</span></button>
+      <button class="chip" type="button" data-f="5" aria-pressed="false"><span aria-hidden="true">🍰</span>Десерты <span class="chip__n">11</span></button>
+    </div>
+  </div>
+    <div class="ml__group" data-cat="0">
       <h3 class="ml__title">Сэндвичи</h3>
-      <ul class="ml__list">
+      <ul class="ml__list ml__list--dense">
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/001-salyami-temnogo-lorda.jpg" alt="Салями Тёмного Лорда" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Салями Тёмного Лорда</span><span class="ml__price">270 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/002-gamonskiy-goblin.jpg" alt="Гамонский Гоблин" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Гамонский Гоблин</span><span class="ml__price">270 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/003-tunec-sireny.jpg" alt="Тунец Сирены" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Тунец Сирены</span><span class="ml__price">270 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/004-kapreze-inferno.jpg" alt="Капрезе Инферно" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Капрезе Инферно</span><span class="ml__price">300 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="1">
       <h3 class="ml__title">Мороженое</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/005-temnoe-zoloto-hogvartsa.jpg" alt="Тёмное Золото Хогвартса" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Тёмное Золото Хогвартса</span><span class="ml__price">270 ₽</span></span></li>
@@ -53,28 +65,28 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/008-sladkiy-aguamenti.jpg" alt="Сладкий Агуаменти" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Сладкий Агуаменти</span><span class="ml__price">270 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="2">
       <h3 class="ml__title">Лимонады</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/009-feliks-felicis.jpg" alt="Феликс Фелицис" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Феликс Фелицис</span><span class="ml__price">290 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/010-rubinovyy-eliksir.jpg" alt="Рубиновый Эликсир" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Рубиновый Эликсир</span><span class="ml__price">290 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="3">
       <h3 class="ml__title">Горячие напитки</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/011-krov-vasiliska.jpg" alt="Кровь Василиска" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Кровь Василиска</span><span class="ml__price">400 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/012-chary-feniksa.jpg" alt="Чары Феникса" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Чары Феникса</span><span class="ml__price">300 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="4">
       <h3 class="ml__title">Напитки</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/024-slivochnoe.jpg" alt="Сливочное" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Сливочное</span><span class="ml__price">450 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/025-bambl-kofe.jpg" alt="Бамбл-кофе" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Бамбл-кофе</span><span class="ml__price">350 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group">
+    <div class="ml__group" data-cat="5">
       <h3 class="ml__title">Десерты</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/013-mandragora.jpg" alt="Мандрагора" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Мандрагора</span><span class="ml__price">350 ₽</span></span></li>
