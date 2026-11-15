@@ -278,6 +278,11 @@ p { margin: 0 0 .75em; }
   margin-top: auto; align-self: flex-start; max-width: 100%; padding: 5px 10px; border-radius: 999px;
   background: var(--accent); color: var(--accent-ink); font-weight: 800; font-size: .92rem; overflow-wrap: anywhere;
 }
+/* без фото: строгая текстовая карточка — название и цена, без иконок и градиентов */
+.svc-item--text, .rail__card--text { background: var(--surface); }
+.svc-item--text .svc-item__body { padding: 14px 14px 14px; gap: 10px; }
+.svc-item--text .svc-item__price { padding: 0; background: none; color: var(--accent); border-radius: 0; }
+.rail__card--text .rail__text { padding: 16px 14px; justify-content: center; min-height: 84px; }
 .svc-more { margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--line); }
 .svc-more[hidden] { display: none; }
 .svc-more__title { margin: 0 0 6px; font-weight: 800; font-size: 1.1rem; }
