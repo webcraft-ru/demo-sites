@@ -10,9 +10,8 @@
 <meta name="description" content="Кофейня в ЖК «Яблоневые сады»: кофе и сытные вафли на завтрак">
 <meta name="theme-color" content="#4a3328">
 <link rel="preconnect" href="https://images.unsplash.com">
-<link rel="stylesheet" href="../assets/style.css?v=03eceb5e">
+<link rel="stylesheet" href="../assets/style.css?v=a81b18d4">
 <style>:root{--accent:#e8b46a;--accent-ink:#2b1a12;--bg:#4a3328;--bg-alt:#543a2e;--surface:#5f4335;--ink:#f8eddb;--muted:#d6c1a4;--line:rgba(248,237,219,.16);--card-from:#68493b;--card-to:#56392d;--ph-from:#7a5a47;--ph-to:#4a3328;--final-bg:#3a261d}</style>
-<noscript><style>.acc__panel{grid-template-rows:1fr}.acc__body>.cards{opacity:1;transform:none}.acc__chev{display:none}</style></noscript>
 </head>
 <body>
 <div class="demo-bar" role="note">Демо-концепт, не официальный сайт, удалим по первой просьбе</div>
@@ -35,16 +34,16 @@
 
 <section class="section menu-list" id="services"><div class="wrap">
   <h2>Меню и цены</h2>
-  <span class="filter-anchor" data-filter-anchor></span>
-  <div class="filter" data-filter hidden>
-    <div class="filter__track" role="group" aria-label="Фильтр по разделам">
-      <button class="chip" type="button" data-f="all" aria-pressed="true">Все <span class="chip__n">19</span></button>
-      <button class="chip" type="button" data-f="0" aria-pressed="false"><span aria-hidden="true">☕</span>Напитки <span class="chip__n">13</span></button>
-      <button class="chip" type="button" data-f="1" aria-pressed="false"><span aria-hidden="true">🧇</span>Завтраки: вафли <span class="chip__n">6</span></button>
+  <nav class="spy" data-spy aria-label="Разделы меню" hidden>
+    <button class="hs-btn hs-btn--prev" type="button" data-hs-prev aria-label="Прокрутить разделы влево" tabindex="-1">‹</button>
+    <div class="spy__track" data-hs-track>
+      <a class="spy__chip" href="#menu-0" data-spy-link="0"><span aria-hidden="true">☕</span>Напитки <span class="spy__n">13</span></a>
+      <a class="spy__chip" href="#menu-1" data-spy-link="1"><span aria-hidden="true">🧇</span>Завтраки: вафли <span class="spy__n">6</span></a>
     </div>
-  </div>
-    <div class="ml__group" data-cat="0">
-      <h3 class="ml__title">Напитки</h3>
+    <button class="hs-btn hs-btn--next" type="button" data-hs-next aria-label="Прокрутить разделы вправо" tabindex="-1">›</button>
+  </nav>
+    <div class="ml__group" id="menu-0" data-spy-group="0">
+      <h3 class="ml__title"><span aria-hidden="true">☕</span> Напитки</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/emilio/menu/01-espresso-35ml.jpg" alt="Эспрессо, 35 мл" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Эспрессо, 35 мл</span><span class="ml__price">150 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/emilio/menu/02-americano-350ml.jpg" alt="Американо, 250 / 350 мл" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Американо, 250 / 350 мл</span><span class="ml__price">200 ₽</span></span></li>
@@ -61,8 +60,8 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/emilio/menu/13-latte-chernichnyy-zefir-350ml.jpg" alt="Латте «Черничный зефир», 350 мл" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Латте «Черничный зефир», 350 мл</span><span class="ml__price">320 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group" data-cat="1">
-      <h3 class="ml__title">Завтраки: вафли</h3>
+    <div class="ml__group" id="menu-1" data-spy-group="1">
+      <h3 class="ml__title"><span aria-hidden="true">🧇</span> Завтраки: вафли</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/emilio/menu/14-vaflya-kurica-sladkiy-chili-280g.jpg" alt="Вафля «Курица — сладкий чили», 280 г" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Вафля «Курица — сладкий чили», 280 г</span><span class="ml__price">420 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/emilio/menu/15-vaflya-krevetki-tom-yam-280g.jpg" alt="Вафля «Креветки — том ям», 280 г" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Вафля «Креветки — том ям», 280 г</span><span class="ml__price">480 ₽</span></span></li>
@@ -141,6 +140,6 @@
 </div></footer>
 <a class="fab" href="tel:+79601005571" aria-label="Позвонить +7 960 100-55-71" data-fab><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><span>Позвонить</span></a>
 <script>window.BIZ_HOURS={"text":"Пн–Пт 09:00–21:00, Сб–Вс 10:00–21:00","week":[["09:00","21:00"],["09:00","21:00"],["09:00","21:00"],["09:00","21:00"],["09:00","21:00"],["10:00","21:00"],["10:00","21:00"]],"timezone":"Europe/Moscow"};</script>
-<script src="../assets/main.js?v=e2adfc6d" defer></script>
+<script src="../assets/main.js?v=5a22d7b2" defer></script>
 </body>
 </html>

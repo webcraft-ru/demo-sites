@@ -10,9 +10,8 @@
 <meta name="description" content="Кофейня в стиле Гарри Поттера в Тамбове: волшебные напитки, десерты и сэндвичи">
 <meta name="theme-color" content="#171221">
 <link rel="preconnect" href="https://images.unsplash.com">
-<link rel="stylesheet" href="../assets/style.css?v=03eceb5e">
+<link rel="stylesheet" href="../assets/style.css?v=a81b18d4">
 <style>:root{--accent:#d9a441;--accent-ink:#1c1424;--bg:#171221;--bg-alt:#1e182b;--surface:#2a2238;--ink:#f4efe6;--muted:#a59cb5;--line:rgba(255,255,255,.09);--card-from:#372c4b;--card-to:#241c33;--ph-from:#45385e;--ph-to:#1d1629;--final-bg:#0f0b17;--edge-rgb:8,5,14;--fade-to:#241c33}</style>
-<noscript><style>.acc__panel{grid-template-rows:1fr}.acc__body>.cards{opacity:1;transform:none}.acc__chev{display:none}</style></noscript>
 </head>
 <body>
 <div class="demo-bar" role="note">Демо-концепт, не официальный сайт, удалим по первой просьбе</div>
@@ -35,29 +34,29 @@
 
 <section class="section menu-list menu-list--plain" id="services" style="--ml-bg:#241c33;--ml-ink:#f4efe6;--ml-muted:#b3a9c4;--ml-accent:#e6b44f;--ml-card:rgba(255,255,255,.06);--ml-line:rgba(255,255,255,.13)"><div class="wrap">
   <h2>Меню и цены</h2>
-  <span class="filter-anchor" data-filter-anchor></span>
-  <div class="filter" data-filter hidden>
-    <div class="filter__track" role="group" aria-label="Фильтр по разделам">
-      <button class="chip" type="button" data-f="all" aria-pressed="true">Все <span class="chip__n">25</span></button>
-      <button class="chip" type="button" data-f="0" aria-pressed="false"><span aria-hidden="true">🥪</span>Сэндвичи <span class="chip__n">4</span></button>
-      <button class="chip" type="button" data-f="1" aria-pressed="false"><span aria-hidden="true">🍨</span>Мороженое <span class="chip__n">4</span></button>
-      <button class="chip" type="button" data-f="2" aria-pressed="false"><span aria-hidden="true">🍹</span>Лимонады <span class="chip__n">2</span></button>
-      <button class="chip" type="button" data-f="3" aria-pressed="false"><span aria-hidden="true">☕</span>Горячие напитки <span class="chip__n">2</span></button>
-      <button class="chip" type="button" data-f="4" aria-pressed="false"><span aria-hidden="true">🥤</span>Напитки <span class="chip__n">2</span></button>
-      <button class="chip" type="button" data-f="5" aria-pressed="false"><span aria-hidden="true">🍰</span>Десерты <span class="chip__n">11</span></button>
+  <nav class="spy" data-spy aria-label="Разделы меню" hidden>
+    <button class="hs-btn hs-btn--prev" type="button" data-hs-prev aria-label="Прокрутить разделы влево" tabindex="-1">‹</button>
+    <div class="spy__track" data-hs-track>
+      <a class="spy__chip" href="#menu-0" data-spy-link="0"><span aria-hidden="true">🥪</span>Сэндвичи <span class="spy__n">4</span></a>
+      <a class="spy__chip" href="#menu-1" data-spy-link="1"><span aria-hidden="true">🍨</span>Мороженое <span class="spy__n">4</span></a>
+      <a class="spy__chip" href="#menu-2" data-spy-link="2"><span aria-hidden="true">🍹</span>Лимонады <span class="spy__n">2</span></a>
+      <a class="spy__chip" href="#menu-3" data-spy-link="3"><span aria-hidden="true">☕</span>Горячие напитки <span class="spy__n">2</span></a>
+      <a class="spy__chip" href="#menu-4" data-spy-link="4"><span aria-hidden="true">🥤</span>Напитки <span class="spy__n">2</span></a>
+      <a class="spy__chip" href="#menu-5" data-spy-link="5"><span aria-hidden="true">🍰</span>Десерты <span class="spy__n">11</span></a>
     </div>
-  </div>
-    <div class="ml__group" data-cat="0">
-      <h3 class="ml__title">Сэндвичи</h3>
-      <ul class="ml__list ml__list--dense">
+    <button class="hs-btn hs-btn--next" type="button" data-hs-next aria-label="Прокрутить разделы вправо" tabindex="-1">›</button>
+  </nav>
+    <div class="ml__group" id="menu-0" data-spy-group="0">
+      <h3 class="ml__title"><span aria-hidden="true">🥪</span> Сэндвичи</h3>
+      <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/001-salyami-temnogo-lorda.jpg" alt="Салями Тёмного Лорда" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Салями Тёмного Лорда</span><span class="ml__price">270 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/002-gamonskiy-goblin.jpg" alt="Гамонский Гоблин" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Гамонский Гоблин</span><span class="ml__price">270 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/003-tunec-sireny.jpg" alt="Тунец Сирены" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Тунец Сирены</span><span class="ml__price">270 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/004-kapreze-inferno.jpg" alt="Капрезе Инферно" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Капрезе Инферно</span><span class="ml__price">300 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group" data-cat="1">
-      <h3 class="ml__title">Мороженое</h3>
+    <div class="ml__group" id="menu-1" data-spy-group="1">
+      <h3 class="ml__title"><span aria-hidden="true">🍨</span> Мороженое</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/005-temnoe-zoloto-hogvartsa.jpg" alt="Тёмное Золото Хогвартса" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Тёмное Золото Хогвартса</span><span class="ml__price">270 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/006-zelenyy-artefakt.jpg" alt="Зелёный Артефакт" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Зелёный Артефакт</span><span class="ml__price">330 ₽</span></span></li>
@@ -65,29 +64,29 @@
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/008-sladkiy-aguamenti.jpg" alt="Сладкий Агуаменти" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Сладкий Агуаменти</span><span class="ml__price">270 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group" data-cat="2">
-      <h3 class="ml__title">Лимонады</h3>
+    <div class="ml__group" id="menu-2" data-spy-group="2">
+      <h3 class="ml__title"><span aria-hidden="true">🍹</span> Лимонады</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/009-feliks-felicis.jpg" alt="Феликс Фелицис" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Феликс Фелицис</span><span class="ml__price">290 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/010-rubinovyy-eliksir.jpg" alt="Рубиновый Эликсир" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Рубиновый Эликсир</span><span class="ml__price">290 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group" data-cat="3">
-      <h3 class="ml__title">Горячие напитки</h3>
+    <div class="ml__group" id="menu-3" data-spy-group="3">
+      <h3 class="ml__title"><span aria-hidden="true">☕</span> Горячие напитки</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/011-krov-vasiliska.jpg" alt="Кровь Василиска" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Кровь Василиска</span><span class="ml__price">400 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/012-chary-feniksa.jpg" alt="Чары Феникса" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Чары Феникса</span><span class="ml__price">300 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group" data-cat="4">
-      <h3 class="ml__title">Напитки</h3>
+    <div class="ml__group" id="menu-4" data-spy-group="4">
+      <h3 class="ml__title"><span aria-hidden="true">🥤</span> Напитки</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/024-slivochnoe.jpg" alt="Сливочное" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Сливочное</span><span class="ml__price">450 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/025-bambl-kofe.jpg" alt="Бамбл-кофе" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Бамбл-кофе</span><span class="ml__price">350 ₽</span></span></li>
       </ul>
     </div>
-    <div class="ml__group" data-cat="5">
-      <h3 class="ml__title">Десерты</h3>
+    <div class="ml__group" id="menu-5" data-spy-group="5">
+      <h3 class="ml__title"><span aria-hidden="true">🍰</span> Десерты</h3>
       <ul class="ml__list">
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/013-mandragora.jpg" alt="Мандрагора" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Мандрагора</span><span class="ml__price">350 ₽</span></span></li>
         <li class="ml__item"><img class="ml__thumb" src="../images/hogsmeade/services/014-akcio.jpg" alt="Акцио" width="72" height="72" loading="lazy" decoding="async"><span class="ml__text"><span class="ml__name">Акцио</span><span class="ml__price">300 ₽</span></span></li>
@@ -171,6 +170,6 @@
 </div></footer>
 <a class="fab" href="tel:+79106589711" aria-label="Позвонить +7 910 658-97-11" data-fab><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><span>Позвонить</span></a>
 <script>window.BIZ_HOURS={"text":"Пн–Пт 09:00–21:00, Сб–Вс 10:00–22:00","week":[["09:00","21:00"],["09:00","21:00"],["09:00","21:00"],["09:00","21:00"],["09:00","21:00"],["10:00","22:00"],["10:00","22:00"]],"timezone":"Europe/Moscow"};</script>
-<script src="../assets/main.js?v=e2adfc6d" defer></script>
+<script src="../assets/main.js?v=5a22d7b2" defer></script>
 </body>
 </html>
