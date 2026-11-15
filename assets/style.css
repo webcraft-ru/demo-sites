@@ -188,6 +188,20 @@ p { margin: 0 0 .75em; }
 .chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
 .chip[aria-pressed="true"] .chip__n { opacity: .8; }
 [data-cat][hidden] { display: none; }
+/* Телефон (≤ 480 px): вертикальный список со своей прокруткой — видно 2 кнопки целиком и половину третьей */
+@media (max-width: 480px) {
+  .filter { --chip-h: 42px; --chip-gap: 8px; }
+  .filter__track {
+    flex-direction: column; gap: var(--chip-gap);
+    overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain;
+    height: calc(var(--chip-h) * 2.5 + var(--chip-gap) * 2);
+    scroll-snap-type: y proximity; scroll-padding: 0;
+    -webkit-mask-image: linear-gradient(180deg, #000 calc(100% - 14px), rgba(0,0,0,.6) 100%);
+            mask-image: linear-gradient(180deg, #000 calc(100% - 14px), rgba(0,0,0,.6) 100%);
+  }
+  .chip { width: 100%; height: var(--chip-h); min-height: 0; flex: none; border-radius: 12px; overflow: hidden; text-overflow: ellipsis; }
+  .chip__n { margin-left: auto; }
+}
 @media (min-width: 900px) {
   .filter { position: static; margin: 0 0 14px; padding: 0; background: none; backdrop-filter: none; -webkit-backdrop-filter: none; }
   .filter__track { flex-wrap: wrap; overflow: visible; padding: 0; -webkit-mask-image: none; mask-image: none; }
