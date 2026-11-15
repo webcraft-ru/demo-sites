@@ -285,10 +285,6 @@ p { margin: 0 0 .75em; }
   border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
   box-shadow: 0 2px 4px rgba(0,0,0,.4), 0 12px 28px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.03) inset, 0 6px 22px color-mix(in srgb, var(--accent) 12%, transparent);
 }
-.svc-item--text::before, .rail__card--text::before {
-  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px;
-  background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent) 20%, transparent));
-}
 .svc-item--text:hover, .rail__card--text:hover {
   border-color: var(--accent);
   box-shadow: 0 4px 8px rgba(0,0,0,.45), 0 18px 38px rgba(0,0,0,.55), 0 8px 28px color-mix(in srgb, var(--accent) 28%, transparent);
