@@ -390,3 +390,31 @@ p { margin: 0 0 .75em; }
   background: linear-gradient(180deg, rgba(20,14,10,.30) 0%, rgba(20,14,10,.52) 38%, rgba(20,14,10,.74) calc(100% - 190px), color-mix(in srgb, var(--fade-to) 55%, rgba(20,14,10,.5)) calc(100% - 80px), var(--fade-to) 100%);
 }
 .menu-list--plain .ml__thumb { background: var(--ml-line, rgba(255,255,255,.1)); }
+
+/* ---------- Аккордеоны: компьютер — сетка, телефон — простой список ---------- */
+/* Компьютер (≥ 768 px): разделы плитками по 4–5 в ряд; раскрытый раздел занимает всю строку */
+@media (min-width: 768px) {
+  .accs { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); align-items: start; gap: 14px; }
+  .acc.is-open { grid-column: 1 / -1; }
+  .acc__btn { padding: 12px 12px 12px 12px; gap: 12px; }
+  .acc__thumb { width: 56px; height: 56px; }
+  .acc__title { font-size: 1.02rem; }
+  .acc__chev { width: 32px; height: 32px; }
+  .acc.is-open .acc__btn { padding: 14px 20px 14px 14px; }
+  .acc.is-open .acc__thumb { width: 76px; height: 76px; }
+  .acc.is-open .acc__title { font-size: 1.2rem; }
+}
+/* Телефон (< 768 px): без раскрывающихся блоков — заголовок раздела и сразу позиции (как у меню-списка) */
+@media (max-width: 767px) {
+  .acc-hint { display: none; }
+  .accs { display: block; margin-bottom: 0; }
+  .acc, .acc:hover, .acc.is-open { background: none; border: 0; box-shadow: none; border-radius: 0; overflow: visible; margin-top: 22px; }
+  .acc__head { margin: 0 0 12px; }
+  .acc__btn, .acc__btn:hover { padding: 0; cursor: default; pointer-events: none; background: none; }
+  .acc__thumb, .acc__chev, .acc__from { display: none; }
+  .acc__text { display: block; }
+  .acc__title { font-size: 1.25rem; font-weight: 800; letter-spacing: .01em; color: var(--accent); }
+  .acc__panel { grid-template-rows: 1fr; transition: none; }
+  .acc__body { overflow: visible; }
+  .acc__body > .cards, .acc.is-open .acc__body > .cards { padding: 0; opacity: 1; transform: none; transition: none; }
+}
