@@ -52,12 +52,8 @@
           // аккордеон: выбранный раздел сразу раскрываем
           if (show && f !== 'all' && g.hasAttribute('data-acc') && !g.classList.contains('is-open')) g.querySelector('.acc__btn').click();
         });
-        // телефон: вертикальный список — нажатая кнопка встаёт второй сверху (над ней предыдущая, ниже видна следующая)
-        if (track.scrollHeight > track.clientHeight + 1) {
-          var step = chip.offsetHeight + (parseFloat(getComputedStyle(track).rowGap) || 0);
-          track.scrollTo({ top: Math.max(0, chip.offsetTop - step), behavior: 'smooth' });
-        } else if (track.scrollWidth > track.clientWidth) {
-          // планшет: горизонтальная лента — выбранную кнопку в центр
+        // выбранную кнопку — в центр полосы прокрутки
+        if (track.scrollWidth > track.clientWidth) {
           track.scrollTo({ left: chip.offsetLeft - (track.clientWidth - chip.offsetWidth) / 2, behavior: 'smooth' });
         }
         if (stuck) window.scrollTo({ top: window.scrollY + anchor.getBoundingClientRect().top - demoH(), behavior: 'smooth' });
